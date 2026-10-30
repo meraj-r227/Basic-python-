@@ -1,2 +1,2 @@
-# Basic-python-
-A beginner-friendly guide to Python. Learn the basics with clear examples and hands-on exercises.
+# OT-with-python-
+I am currently learning Basic python  and will be sharing my projects here.
