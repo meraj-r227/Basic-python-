@@ -234,3 +234,50 @@ import  ipapi
 # BUT    out  put  is  DICT  
 # data  =  ipapi.location("Your  ip ")
 # print(type(data))
+
+
+
+
+##work  with  nested dict  
+import platform
+import requests
+
+hs_name = platform.uname()[0]
+hs_ver = platform.uname()[2]
+architecutre = platform.uname()[4]
+
+
+hs_ip = requests.get("https://api.ipify.org").text
+
+
+response = requests.get(f"http://ip-api.com/json/{hs_ip}")
+ip_info = response.json()
+
+ip_city = ip_info['city']
+ip_country = ip_info['country']
+
+datahs = {
+    # we have 2 keys and it keys have 2 values that dict 
+    "hs_info": {
+        "hs_name": hs_name,
+        "hs_version": hs_ver,
+        "architecutr": architecutre
+    },
+    
+    "ip-info": {
+        "ip": hs_ip,
+        "city": ip_city,
+        "country": ip_country
+    },
+    "names":[
+            "coda",'uoda',
+        ]
+    
+}
+
+
+print(datahs['hs_info'])
+print(datahs["ip-info"])
+print(datahs["ip-info"]['ip'])
+print(datahs)
+print(datahs["names"][0])
