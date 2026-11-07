@@ -281,3 +281,4 @@ print(datahs["ip-info"])
 print(datahs["ip-info"]['ip'])
 print(datahs)
 print(datahs["names"][0])
+# better  undrestanding of  nested dict 
