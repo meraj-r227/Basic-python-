@@ -90,4 +90,27 @@ for i in range(12):
 
 for i in range(100,112):
     print(Fore.BLUE+str(i))        
-                  
+  
+# Use  correct  of End  loop 
+# for  ex  if  you  want  to  execute the following  command (First  method ) 
+#  it  is  enough to  use  the  second method 
+# as  result  "END  LOOP" ===>> USE  "else"  
+
+# First  method====>>
+val =""
+for  i  in  list1:
+    print(i)
+    if i ==  "090876":
+        val= "no"
+        break
+    else :
+        val = "yes"
+if  val  == "yes":
+    print("End  loop ")
+elif val == "no":
+    pass    
+# secend  method  =====>>>  
+for  i  in  list1:
+    print(i)
+else:
+    print("End  loop ")                               
